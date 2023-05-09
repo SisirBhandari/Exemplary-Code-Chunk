@@ -20,11 +20,17 @@ Safal <- na.omit(Safal)
 
 # Plot the data using ggplot2
 ggplot(Safal, aes(year, NE.EXP.GNFS.ZS, color=country, shape = country)) +  `create ggplot object with Safal data and mapping aesthetics`
+
   geom_line() + `add line plot`
+  
   geom_point(data = Safal %>% group_by(country) %>% 
+  
                filter(NE.EXP.GNFS.ZS == max(NE.EXP.GNFS.ZS, na.rm = TRUE)),
+               
              size = 3, shape = 22) + `add point plot for maximum values`
+             
   geom_text(data = Safal %>% group_by(country) %>% 
+  
               filter(NE.EXP.GNFS.ZS == max(NE.EXP.GNFS.ZS, na.rm = TRUE)), aes(label = round(NE.EXP.GNFS.ZS, 2), 
     x = year, y = NE.EXP.GNFS.ZS + 0.5), size = 3, vjust = -0.75, hjust = -0.5, size = 3, show.legend = FALSE) + # add labels for maximum values
   scale_shape_manual(values = c(19, 17, 15, 13, 11, 9, 7, 5)) + # set manual shapes for legends
