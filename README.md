@@ -6,9 +6,8 @@ In addition, the geom_line function is used to create a line plot, showing the t
 
 Finally, the function of the guide is used to remove the legend for colour and override the legend for shape with black colour.
 
-# R-Code with explanation
 
-Necessary packages and libraries
+**Necessary packages and libraries**
 
 `install.packages("tidyverse")`
 
@@ -27,16 +26,14 @@ Necessary packages and libraries
 
 you can also upload other packages such as to read xl, csv and other as per need.
 
-## Read in the data
-`Safal <- read.csv("Safal.csv")` # you can read the data directly using the read.csv function from your R-depository. 
+**Read in the data**
+`Safal <- read.csv("Safal.csv")` **you can read the data directly using the read.csv function from your R-depository.** 
 
-## Convert country names to three-letter ISO codes
-Safal$code <- countrycode(sourcevar = Safal$country, origin = "country.name", destination = "iso3c")
+Safal$code <- countrycode(sourcevar = Safal$country, origin = "country.name", destination = "iso3c") **Convert country names to three-letter ISO codes**
 
-## Remove observations with missing data
-Safal <- na.omit(Safal)
+Safal <- na.omit(Safal) **Remove observations with missing data**
 
-## Plot the data using ggplot2
+**Plot the data using ggplot2**
 `ggplot(Safal, aes(year, NE.EXP.GNFS.ZS, color=country, shape = country)) +
 
   geom_line() +
@@ -53,7 +50,7 @@ Safal <- na.omit(Safal)
               
     x = year, y = NE.EXP.GNFS.ZS + 0.5), size = 3, vjust = -0.75, hjust = -0.5, size = 3, show.legend = FALSE) +
     
-  scale_shape_manual(values = c(19, 17, 15, 13, 11, 9, 7, 5)) + #to change the manual shapes
+  scale_shape_manual(values = c(19, 17, 15, 13, 11, 9, 7, 5)) + **to change the manual shapes**
   
   xlab('Year') + 
   
