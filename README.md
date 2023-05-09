@@ -52,33 +52,22 @@ you can also upload other packages such as to read xl, csv and other as per need
     
  `scale_shape_manual(values = c(19, 17, 15, 13, 11, 9, 7, 5)) +` #_**to change the manual shapes**_
   
-  xlab('Year') + 
-  
+  `xlab('Year') + 
   ylab('Net Exports (% of GDP)') +
-  
   scale_x_continuous(limits = c(2011, 2021), expand = c(0,0.5)) +
+  scale_y_continuous(limits = c(0, 50), breaks = seq(0, 50, 10), labels = seq(0, 50, 10))` +
+  xlab('Year') +`
   
-  scale_y_continuous(limits = c(0, 50), breaks = seq(0, 50, 10), labels = seq(0, 50, 10)) +
-  
-  xlab('Year') + 
-  
-  ggtitle("Net Exports (% of GDP) by Country and Year") +
-  
+  `ggtitle("Net Exports (% of GDP) by Country and Year") +
   labs(subtitle = "South Asia") +
-  
   theme_minimal() +
-  
   theme(plot.title = element_text(size = 20, face = "bold"), 
-  
-        plot.subtitle = element_text(size = 20, face = "bold"),
+  plot.subtitle = element_text(size = 20, face = "bold"),`
         
-axis.title.x = element_text(size = 14, face = "bold"),
-
+`axis.title.x = element_text(size = 14, face = "bold"),
 axis.title.y = element_text(size = 14, face = "bold")) + _**# set theme elements for plot title and axis labels**_
-
 facet_wrap(~ country, ncol = 2) + **_# create facets for each country with two columns_**
-
 guides(color = FALSE, shape = guide_legend(override.aes = list(color = "black")))`
 
-## Save the plot to a file
+**Save the plot to a file**
 `ggsave("Net Exports by Country and Year.png")` _**#save in the depository**_
