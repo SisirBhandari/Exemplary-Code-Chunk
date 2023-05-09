@@ -19,7 +19,7 @@ Safal$code <- countrycode(sourcevar = Safal$country, origin = "country.name", de
 Safal <- na.omit(Safal)
 
 # Plot the data using ggplot2
-ggplot(Safal, aes(year, NE.EXP.GNFS.ZS, color=country, shape = country)) +  `create ggplot object with Safal data and mapping aesthetics`
+`ggplot(Safal, aes(year, NE.EXP.GNFS.ZS, color=country, shape = country)) +  `create ggplot object with Safal data and mapping aesthetics`
 
   geom_line() + `add line plot`
   
@@ -47,7 +47,7 @@ ggplot(Safal, aes(year, NE.EXP.GNFS.ZS, color=country, shape = country)) +  `cre
         axis.title.x = element_text(size = 14, face = "bold"),
         axis.title.y = element_text(size = 14, face = "bold")) + # set theme elements for plot title and axis labels
   facet_wrap(~ country, ncol = 2) + # create facets for each country with two columns
-  guides(color = FALSE, shape = guide_legend(override.aes = list(color = "black"))) # remove color legend and set black color for shape legend
+  guides(color = FALSE, shape = guide_legend(override.aes = list(color = "black"))) # remove color legend and set black color for shape legend`
 
 # Save the plot to a file
 ggsave("Net Exports by Country and Year.png")
