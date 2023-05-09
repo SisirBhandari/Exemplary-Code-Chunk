@@ -36,21 +36,21 @@ you can also upload other packages such as to read xl, csv and other as per need
 
 **Plot the data using ggplot2**
 
-`ggplot(Safal, aes(year, NE.EXP.GNFS.ZS, color=country, shape = country)) +
-geom_line() +
-  geom_point(data = Safal %>% group_by(country) %>%`
+`ggplot(Safal, aes(year, NE.EXP.GNFS.ZS, color=country, shape = country)) + _**#create ggplot object with Safal data and mapping aesthetics**_
+geom_line() + _**# add line plot**_
+  geom_point(data = Safal %>% group_by(country) %>%` 
   
-               `filter(NE.EXP.GNFS.ZS == max(NE.EXP.GNFS.ZS, na.rm = TRUE)),`
-               
-            `size = 3, shape = 22) +`
-             
-  `geom_text(data = Safal %>% group_by(country) %>%`
-  
-              `filter(NE.EXP.GNFS.ZS == max(NE.EXP.GNFS.ZS, na.rm = TRUE)), aes(label = round(NE.EXP.GNFS.ZS, 2),`
+`filter(NE.EXP.GNFS.ZS == max(NE.EXP.GNFS.ZS, na.rm = TRUE)),`
               
-    `x = year, y = NE.EXP.GNFS.ZS + 0.5), size = 3, vjust = -0.75, hjust = -0.5, size = 3, show.legend = FALSE) +`
+`size = 3, shape = 22) +` **# add point plot for maximum values**__
+             
+`geom_text(data = Safal %>% group_by(country) %>%`
+  
+ `filter(NE.EXP.GNFS.ZS == max(NE.EXP.GNFS.ZS, na.rm = TRUE)), aes(label = round(NE.EXP.GNFS.ZS, 2),`
+              
+ `x = year, y = NE.EXP.GNFS.ZS + 0.5), size = 3, vjust = -0.75, hjust = -0.5, size = 3, show.legend = FALSE) +`
     
-  `scale_shape_manual(values = c(19, 17, 15, 13, 11, 9, 7, 5)) +` #_**to change the manual shapes**_
+ `scale_shape_manual(values = c(19, 17, 15, 13, 11, 9, 7, 5)) +` #_**to change the manual shapes**_
   
   xlab('Year') + 
   
