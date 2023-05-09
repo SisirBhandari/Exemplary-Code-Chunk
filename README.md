@@ -6,6 +6,8 @@ Necessary packages and libraries
 
 `install.packages("countrycode")`
 
+`install.packages("ggplot2")`
+
 `install.packages("pacman")`
 
 `library(tidyverse)`
@@ -15,6 +17,7 @@ Necessary packages and libraries
 `library(pacman)`
 
 
+you can also upload other packages such as to read xl, csv and other as per need.
 
 ## Read in the data
 Safal <- read.csv("Safal.csv")
