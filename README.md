@@ -1,10 +1,12 @@
-# Install necessary packages
-install.packages("tidyverse")
-install.packages("countrycode")
+# R-Code with explanation
 
-## Load necessary libraries
+Necessary packages and libraries
+`install necessary packages
+install.packages("tidyverse")
+install.packages("countrycode")`
 library(tidyverse)
-library(countrycode)
+library(countrycode)`
+
 
 ## Read in the data
 Safal <- read.csv("Safal.csv")
