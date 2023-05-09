@@ -27,11 +27,11 @@ Finally, the function of the guide is used to remove the legend for colour and o
 you can also upload other packages such as to read xl, csv and other as per need.
 
 **Read in the data**
-`Safal <- read.csv("Safal.csv")` **you can read the data directly using the read.csv function from your R-depository.** 
+`Safal <- read.csv("Safal.csv")` #**you can read the data directly using the read.csv function from your R-depository.** 
 
-Safal$code <- countrycode(sourcevar = Safal$country, origin = "country.name", destination = "iso3c") **Convert country names to three-letter ISO codes**
+`Safal$code <- countrycode(sourcevar = Safal$country, origin = "country.name", destination = "iso3c")` #**Convert country names to three-letter ISO codes**
 
-Safal <- na.omit(Safal) **Remove observations with missing data**
+`Safal <- na.omit(Safal)` #**Remove observations with missing data**
 
 **Plot the data using ggplot2**
 `ggplot(Safal, aes(year, NE.EXP.GNFS.ZS, color=country, shape = country)) +
