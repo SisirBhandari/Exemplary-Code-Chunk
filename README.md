@@ -20,7 +20,7 @@ Necessary packages and libraries
 you can also upload other packages such as to read xl, csv and other as per need.
 
 ## Read in the data
-Safal <- read.csv("Safal.csv")
+`Safal <- read.csv("Safal.csv")` # you can read the data directly using the read.csv function from your R-depository. 
 
 ## Convert country names to three-letter ISO codes
 Safal$code <- countrycode(sourcevar = Safal$country, origin = "country.name", destination = "iso3c")
