@@ -6,6 +6,8 @@ In addition, the geom_line function is used to create a line plot, showing the t
 
 Finally, the function of the guide is used to remove the legend for colour and override the legend for shape with black colour.
 
+**The data for this was downloaded from the World Bank, world development indicators data, which is available at the World Bank website**
+
 
 **Necessary packages and libraries**
 
