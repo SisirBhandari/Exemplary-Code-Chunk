@@ -27,30 +27,32 @@ Finally, the function of the guide is used to remove the legend for colour and o
 you can also upload other packages such as to read xl, csv and other as per need.
 
 **Read in the data**
-`Safal <- read.csv("Safal.csv")` #**you can read the data directly using the read.csv function from your R-depository.** 
 
-`Safal$code <- countrycode(sourcevar = Safal$country, origin = "country.name", destination = "iso3c")` #**Convert country names to three-letter ISO codes**
+`Safal <- read.csv("Safal.csv")` #**_you can read the data directly using the read.csv function from your R-depository._** 
 
-`Safal <- na.omit(Safal)` #**Remove observations with missing data**
+`Safal$code <- countrycode(sourcevar = Safal$country, origin = "country.name", destination = "iso3c")` _#**Convert country names to three-letter ISO codes**_
+
+`Safal <- na.omit(Safal)` _#**Remove observations with missing data**_
 
 **Plot the data using ggplot2**
-`ggplot(Safal, aes(year, NE.EXP.GNFS.ZS, color=country, shape = country)) +
 
-  geom_line() +
+`ggplot(Safal, aes(year, NE.EXP.GNFS.ZS, color=country, shape = country)) +`
+
+ `geom_line() +`
   
-  geom_point(data = Safal %>% group_by(country) %>% 
+  `geom_point(data = Safal %>% group_by(country) %>%`
   
-               filter(NE.EXP.GNFS.ZS == max(NE.EXP.GNFS.ZS, na.rm = TRUE)),
+               `filter(NE.EXP.GNFS.ZS == max(NE.EXP.GNFS.ZS, na.rm = TRUE)),`
                
-             size = 3, shape = 22) +
+            `size = 3, shape = 22) +`
              
-  geom_text(data = Safal %>% group_by(country) %>% 
+  `geom_text(data = Safal %>% group_by(country) %>%`
   
-              filter(NE.EXP.GNFS.ZS == max(NE.EXP.GNFS.ZS, na.rm = TRUE)), aes(label = round(NE.EXP.GNFS.ZS, 2),
+              `filter(NE.EXP.GNFS.ZS == max(NE.EXP.GNFS.ZS, na.rm = TRUE)), aes(label = round(NE.EXP.GNFS.ZS, 2),`
               
-    x = year, y = NE.EXP.GNFS.ZS + 0.5), size = 3, vjust = -0.75, hjust = -0.5, size = 3, show.legend = FALSE) +
+    `x = year, y = NE.EXP.GNFS.ZS + 0.5), size = 3, vjust = -0.75, hjust = -0.5, size = 3, show.legend = FALSE) +`
     
-  scale_shape_manual(values = c(19, 17, 15, 13, 11, 9, 7, 5)) + **to change the manual shapes**
+  `scale_shape_manual(values = c(19, 17, 15, 13, 11, 9, 7, 5)) +` #_**to change the manual shapes**_
   
   xlab('Year') + 
   
