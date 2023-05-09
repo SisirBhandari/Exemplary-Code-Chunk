@@ -13,6 +13,7 @@ library(tidyverse)
 library(countrycode)`
 
 
+
 ## Read in the data
 Safal <- read.csv("Safal.csv")
 
