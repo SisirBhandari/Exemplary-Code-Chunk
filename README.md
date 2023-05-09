@@ -36,9 +36,9 @@ you can also upload other packages such as to read xl, csv and other as per need
 
 **Plot the data using ggplot2**
 
-`ggplot(Safal, aes(year, NE.EXP.GNFS.ZS, color=country, shape = country)) + _**#create ggplot object with Safal data and mapping aesthetics**_
-geom_line() + _**# add line plot**_
-  geom_point(data = Safal %>% group_by(country) %>%` 
+`ggplot(Safal, aes(year, NE.EXP.GNFS.ZS, color=country, shape = country))` +   **create ggplot object with Safal data and mapping aesthetics**
+`geom_line() +`      _**# add line plot**_
+  `geom_point(data = Safal %>% group_by(country) %>%` 
   
 `filter(NE.EXP.GNFS.ZS == max(NE.EXP.GNFS.ZS, na.rm = TRUE)),`
               
