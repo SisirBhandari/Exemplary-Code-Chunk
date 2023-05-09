@@ -1,10 +1,15 @@
 # R-Code with explanation
 
 Necessary packages and libraries
+
 `install necessary packages
+
 install.packages("tidyverse")
-install.packages("countrycode")`
+
+install.packages("countrycode")
+
 library(tidyverse)
+
 library(countrycode)`
 
 
