@@ -89,3 +89,5 @@ ggplot(Safal, aes(year, NE.EXP.GNFS.ZS, color=country, shape = country)) + # cre
 `ggsave("Net Exports by Country and Year.png")` _**#save in the depository**_
 
 **To ues this code, make sure to replace `Safal` with the name of your dataset, and adjust the section headers and text as appropriate for your project.**
+
+To see the results, check the .jpeg file in this repository. 
