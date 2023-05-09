@@ -28,7 +28,7 @@ you can also upload other packages such as to read xl, csv and other as per need
 
 **Read in the data**
 
-`Safal <- read.csv("Safal.csv")` #**_you can read the data directly using the read.csv function from your R-depository._** 
+`Safal <- read.csv("Safal.csv")` #**_you can read the data directly from your depository using the read.csv function** 
 
 `Safal$code <- countrycode(sourcevar = Safal$country, origin = "country.name", destination = "iso3c")` _#**Convert country names to three-letter ISO codes**_
 
