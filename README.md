@@ -74,11 +74,11 @@ you can also upload other packages such as to read xl, csv and other as per need
         
 axis.title.x = element_text(size = 14, face = "bold"),
 
-axis.title.y = element_text(size = 14, face = "bold")) +
+axis.title.y = element_text(size = 14, face = "bold")) + _**# set theme elements for plot title and axis labels**_
 
-facet_wrap(~ country, ncol = 2) +
+facet_wrap(~ country, ncol = 2) + **_# create facets for each country with two columns_**
 
 guides(color = FALSE, shape = guide_legend(override.aes = list(color = "black")))`
 
 ## Save the plot to a file
-ggsave("Net Exports by Country and Year.png")
+`ggsave("Net Exports by Country and Year.png")` _**#save in the depository**_
